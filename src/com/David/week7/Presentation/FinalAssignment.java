@@ -35,11 +35,6 @@ public class FinalAssignment {
         System.out.println("The amount of vowels is " + amountOfVowels + ".");
 
         String string = array.toString();
-
-        if(string.equals())
-
-
-
-
+         
     }
 }

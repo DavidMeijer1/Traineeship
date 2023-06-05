@@ -10,10 +10,6 @@ public class BrokenBridge {
     }
 
     public static boolean isSafeBridge(String string){
-        if(string.contains(" ")){
-            return false;
-        } else {
-            return true;
-        }
+        return !string.contains(" ");
 }
 }

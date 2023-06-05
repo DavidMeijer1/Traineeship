@@ -1,6 +1,6 @@
 package simpleExercises.size13;
 
-public class notString {
+public class NotString {
     public static void main(String[] args) {
         System.out.println(notString2("candy"));
         System.out.println(notString2("x"));

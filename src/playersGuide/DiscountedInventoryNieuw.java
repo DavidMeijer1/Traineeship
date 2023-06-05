@@ -4,8 +4,8 @@ import java.util.List;
 
 class InventoryItem {
 
-    private String name;
-    private double price;
+    private final String name;
+    private final double price;
 
     public InventoryItem(String name, double price) {
         this.name = name;

@@ -1,7 +1,7 @@
 package com.David.week7.Company;
 
 public class Employee {
-    private String name;
+    private final String name;
     private String address;
     private String phoneNumber;
     private float experienceInYears;

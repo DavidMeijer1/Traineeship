@@ -2,14 +2,11 @@ package com.David.week4;
 
 public class OddEvenWithObject {
     public static boolean isOdd(int input) {
-        if (input % 2 == 0) {
-            return true;
-        }
-        return false;
+        return input % 2 == 0;
     }
 
     public static void main(String[] args) {
         OddEvenWithObject test = new OddEvenWithObject();
-        System.out.println(test.isOdd(22));
+        System.out.println(isOdd(22));
     }
 }

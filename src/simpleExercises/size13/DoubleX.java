@@ -8,11 +8,7 @@ public class DoubleX {
     }
 
     public static boolean doubleX(String string){
-        if(string.contains("xx")){
-            return true;
-        } else{
-            return false;
-        }
+        return string.contains("xx");
     }
 
 }
