@@ -1,0 +1,12 @@
+June 5th, 2023
+
+10:50 Started with exercise SecondsToHoursMinutesAndSeconds
+11:02 Break
+11:15 Started again
+11:40 Finished the exercise. Lines per minute = 17/35 = 0.48.
+
+12:00 Started with exercise StringTimes
+12:15 Finished exercise. Lines per minute = 14/15 = 0,93.
+
+13:30 Started exercise everyNth.
+13:48 Finished exercise everyNth. Lines per minute = 15/18 = 0,83.
