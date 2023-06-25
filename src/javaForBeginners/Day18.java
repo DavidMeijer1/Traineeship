@@ -1,5 +1,5 @@
 
-package playersGuide.Day18;
+package javaForBeginners;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -19,7 +19,7 @@ public class Day18 {
 //    static int round = 1;
 
     public static void main(String[] args) {
-            runGame();
+        runGame();
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Player 1, how far away from the city do you want to station the manticore?");
 //        distanceFromTheCity = scanner.nextInt();
@@ -47,13 +47,14 @@ public class Day18 {
     }
 
     private static void runGame() {
-        d:while (true) {
+        d:
+        while (true) {
             mantiCoreTurn();
 
-            for (int i = 1; i <=10; i++) {
-                System.out.println(distanceFromTheCity+""+cannonRange);
+            for (int i = 1; i <= 10; i++) {
+                System.out.println(distanceFromTheCity + "" + cannonRange);
                 cannonTurns(i);
-                if (gameOver()){
+                if (gameOver()) {
                     break d;
                 }
             }
@@ -61,10 +62,10 @@ public class Day18 {
     }
 
     private static int getCannonDamage(int rounds) {
-        if (manticoreHit(distanceFromTheCity, cannonRange,rounds)) {
+        if (manticoreHit(distanceFromTheCity, cannonRange, rounds)) {
             System.out.println("yo");
 
-            if (rounds%15==0) {
+            if (rounds % 15 == 0) {
                 cannonDamage = 10;
             } else if (rounds % 5 == 0) {
                 cannonDamage = 5;
@@ -72,21 +73,21 @@ public class Day18 {
                 cannonDamage = 3;
             } else if (0 == 0) {
                 cannonDamage = 1;
-            } else if (rounds==rounds) {
+            } else if (rounds == rounds) {
                 cannonDamage = 3;
             }
             manticoreHealth -= cannonDamage;
-            System.out.println(cannonDamage + " " +manticoreHealth);
+            System.out.println(cannonDamage + " " + manticoreHealth);
             return cannonDamage;
         }
         return 0;
     }
 
 
-    private static boolean manticoreHit(int mantiPosition, int cannonAim,int rounds) {
+    private static boolean manticoreHit(int mantiPosition, int cannonAim, int rounds) {
         if (mantiPosition == cannonAim) {
-            System.out.println(manticoreHealth+" pre hit");
-           return true;
+            System.out.println(manticoreHealth + " pre hit");
+            return true;
         }
         return false;
     }
@@ -97,7 +98,7 @@ public class Day18 {
             return true;
         } else if (cityHealth <= 0) {
             System.out.println("The tower survived \nThe game is over");
-            return  true;
+            return true;
         }
         return false;
     }
@@ -106,13 +107,15 @@ public class Day18 {
         playerTurnMessage(rounds);
         cannonRange = 0;
         cannonRange = inputErrorCheck();
-        manticoreHit(distanceFromTheCity,cannonRange,rounds);
+        manticoreHit(distanceFromTheCity, cannonRange, rounds);
     }
-    private static void mantiCoreTurn(){
+
+    private static void mantiCoreTurn() {
         System.out.println("Player 1, how far away from the city do you want to station the manticore?");
         distanceFromTheCity = inputErrorCheck();
-        System.out.println("Manticore position = "+distanceFromTheCity);
+        System.out.println("Manticore position = " + distanceFromTheCity);
     }
+
     private static int inputErrorCheck() {
         int range;
         while (true) {
@@ -121,7 +124,7 @@ public class Day18 {
                 System.out.println("Enter number between 1 and 100");
                 range = scanner.nextInt();
                 if (range > 0 && range <= 100) {
-                    System.out.println("range "+range);
+                    System.out.println("range " + range);
                     return range;
                 }
             } catch (InputMismatchException e) {
