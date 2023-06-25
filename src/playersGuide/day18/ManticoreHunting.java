@@ -17,7 +17,7 @@ public class ManticoreHunting {
             if (manticoreHealth <= 0) {
                 System.out.println("The Manticore has been destroyed! The city of Consolas has been saved!");
                 break;
-            } else if (cityHealth == 0) {
+            } else if (cityHealth <= 0) {
                 System.out.println("The city is destroyed. The game is over.");
                 break;
             }
