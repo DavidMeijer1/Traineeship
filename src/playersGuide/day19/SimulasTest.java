@@ -1,13 +1,12 @@
-package playersGuide.day19;
+package playersGuide.Day19;
 
 import java.util.Scanner;
 
 public class SimulasTest {
 
-    enum StateOfChest {
+    enum StateOfChest{
         OPEN, CLOSED, LOCKED
     }
-
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -36,6 +35,6 @@ public class SimulasTest {
             }
             choice = scanner.next();
         }
-        while (true);
+        while(true);
     }
 }
