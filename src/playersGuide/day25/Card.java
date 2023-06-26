@@ -15,44 +15,31 @@ public class Card {
     void numberOrSymbolCard() {
         if (cardRank.equals(CardRanks.ONE)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.TWO)) {
+        } else if (cardRank.equals(CardRanks.TWO)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.THREE)) {
+        } else if (cardRank.equals(CardRanks.THREE)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.FOUR)) {
+        } else if (cardRank.equals(CardRanks.FOUR)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.FIVE)) {
+        } else if (cardRank.equals(CardRanks.FIVE)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.SIX)) {
+        } else if (cardRank.equals(CardRanks.SIX)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.SEVEN)) {
+        } else if (cardRank.equals(CardRanks.SEVEN)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.EIGHT)) {
+        } else if (cardRank.equals(CardRanks.EIGHT)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.NINE)) {
+        } else if (cardRank.equals(CardRanks.NINE)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.TEN)) {
+        } else if (cardRank.equals(CardRanks.TEN)) {
             System.out.println("The card is a number card");
-        }
-        if (cardRank.equals(CardRanks.DOLLAR_SIGN)) {
+        } else if (cardRank.equals(CardRanks.DOLLAR_SIGN)) {
             System.out.println("The card is a symbol card");
-        }
-        if (cardRank.equals(CardRanks.PERCENTAGE_SIGN)) {
+        } else if (cardRank.equals(CardRanks.PERCENTAGE_SIGN)) {
             System.out.println("The card is a symbol card");
-        }
-        if (cardRank.equals(CardRanks.ACCENT_CIRCONFLEXE)) {
+        } else if (cardRank.equals(CardRanks.ACCENT_CIRCONFLEXE)) {
             System.out.println("The card is a symbol card");
-        }
-        if (cardRank.equals(CardRanks.AMPERSAND)) {
+        } else if (cardRank.equals(CardRanks.AMPERSAND)) {
             System.out.println("The card is a symbol card");
         }
     }
@@ -64,7 +51,8 @@ public class Card {
         ) {
             for (CardRanks ranksLoop : cardRanks
             ) {
-                System.out.println("The " + coloursLoop + " " + ranksLoop);
+                Card allCards = new Card(coloursLoop, ranksLoop);
+                System.out.println("The " + allCards.cardColour.getColour() + " " + allCards.cardRank.getRank());
             }
         }
     }
