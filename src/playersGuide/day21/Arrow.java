@@ -57,16 +57,19 @@ public class Arrow {
 
     public static Arrow createEliteArrow() {
         Arrow eliteArrow = new Arrow(Arrowhead.STEEL, Fletching.PLASTIC, 95.0);
+        System.out.println("An elite arrow has been created.");
         return eliteArrow;
     }
 
     public static Arrow createBeginnerArrow() {
         Arrow beginnerArrow = new Arrow(Arrowhead.WOOD, Fletching.PLASTIC, 75.0);
+        System.out.println("A beginner's has been created.");
         return beginnerArrow;
     }
 
     public static Arrow createMarksmanArrow() {
         Arrow marksmanArrow = new Arrow(Arrowhead.STEEL, Fletching.GOOSE_FEATHERS, 65.0);
+        System.out.println("A marksman arrow has been created.");
         return marksmanArrow;
     }
 
