@@ -8,14 +8,21 @@ import static playersGuide.day26.DoorState.*;
 
 public class Door {
     Scanner scanner = new Scanner(System.in);
-    static final DoorState open = OPEN;
-    static final DoorState closed = CLOSED;
-    static final DoorState locked = LOCKED;
+    private static final DoorState open = OPEN;
+    private static final DoorState closed = CLOSED;
+    private static final DoorState locked = LOCKED;
     private DoorState doorState;
 
-    private int numericPasscode;
-
+    private int numericPasscode = 123;
     private int newNumericPasscode;
+
+    public int getNumericPasscode() {
+        return numericPasscode;
+    }
+
+    public int getNewNumericPasscode() {
+        return newNumericPasscode;
+    }
 
     public DoorState getDoorState() {
         return doorState;
@@ -55,14 +62,18 @@ public class Door {
         return "Select an option";
     }
 
-    String unlock() {
+    String unlock(int givenPasscode) {
         if (doorState == open) {
             return "The door is open. You have to lock it first";
         } else if (doorState == closed) {
             return "The door is closed. You have to lock it first.";
         } else if (doorState == locked) {
-            doorState = closed;
-            return "The door has been unlocked";
+            if (givenPasscode == numericPasscode) {
+                doorState = closed;
+                return "The door has been unlocked";
+            } else {
+                return "That is not the correct passcode. Please give the correct passcode.";
+            }
         }
         return "Select an option";
     }
@@ -72,12 +83,8 @@ public class Door {
         this.numericPasscode = numericPasscode;
     }
 
-    void changePassword(int numericPasscode, int newNumericPasscode) {
-        int currentPasscode = scanner.nextInt();
-        newNumericPasscode = scanner.nextInt();
-        if (currentPasscode == numericPasscode) {
-            numericPasscode = newNumericPasscode;
-        }
+    String changePassword(int numericPasscode, int newNumericPasscode) {
+        this.numericPasscode = newNumericPasscode;
+        return "The passcode has been changed.";
     }
-
 }
