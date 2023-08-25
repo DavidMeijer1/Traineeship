@@ -54,15 +54,4 @@ public class PasswordValidator {
         return numberOfCapitalLettersT < 1;
     }
 
-
-    private static long numberOfDigitsWithLoop(String password) {
-        long count = 0;
-        for (char ch : password.toCharArray()) {
-            if (Character.isDigit(ch)) {
-                count += 1;
-            }
-        }
-        return count;
-    }
-
 }
