@@ -53,5 +53,4 @@ public class PasswordValidator {
         long numberOfCapitalLettersT = password.chars().filter(c -> c == 'T').count();
         return numberOfCapitalLettersT < 1;
     }
-
 }
