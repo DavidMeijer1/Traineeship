@@ -21,35 +21,35 @@ public class PasswordValidator {
             return true;
     }
 
-    private static boolean containsDigits(String password) {
+    private boolean containsDigits(String password) {
         long numberOfDigits = password.chars().filter(c -> Character.isDigit(c)).count();
         return numberOfDigits != 0;
     }
 
-    private static boolean passwordTooShort(String password) {
+    private boolean passwordTooShort(String password) {
         return password.length() < 6;
     }
 
-    private static boolean passwordTooLong(String password) {
+    private boolean passwordTooLong(String password) {
         return password.length() > 13;
     }
 
-    private static boolean containsUpperCaseLetters(String password) {
+    private boolean containsUpperCaseLetters(String password) {
         long numberOfUpperCaseLetters = password.chars().filter(c -> Character.isUpperCase(c)).count();
         return numberOfUpperCaseLetters != 0;
     }
 
-    private static boolean containsLowerCaseLetters(String password) {
+    private boolean containsLowerCaseLetters(String password) {
         long numberOfLowerCaseLetters = password.chars().filter(c -> Character.isLowerCase(c)).count();
         return numberOfLowerCaseLetters != 0;
     }
 
-    private static boolean containsAmpersand(String password) {
+    private boolean containsAmpersand(String password) {
         long numberOfAmpersand = password.chars().filter(c -> c == '&').count();
         return numberOfAmpersand < 1;
     }
 
-    private static boolean containsCapitalLetterT(String password) {
+    private boolean containsCapitalLetterT(String password) {
         long numberOfCapitalLettersT = password.chars().filter(c -> c == 'T').count();
         return numberOfCapitalLettersT < 1;
     }
