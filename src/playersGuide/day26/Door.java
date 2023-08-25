@@ -7,25 +7,23 @@ import java.util.Scanner;
 import static playersGuide.day26.DoorState.*;
 
 public class Door {
-    Scanner scanner = new Scanner(System.in);
     private static final DoorState open = OPEN;
     private static final DoorState closed = CLOSED;
     private static final DoorState locked = LOCKED;
     private DoorState doorState;
 
-    private int numericPasscode = 123;
-    private int newNumericPasscode;
+    private int numericPasscode;
 
     public int getNumericPasscode() {
         return numericPasscode;
     }
 
-    public int getNewNumericPasscode() {
-        return newNumericPasscode;
-    }
-
     public DoorState getDoorState() {
         return doorState;
+    }
+
+    public void setNumericPasscode(int numericPasscode) {
+        this.numericPasscode = numericPasscode;
     }
 
     String open() {
@@ -83,8 +81,4 @@ public class Door {
         this.numericPasscode = numericPasscode;
     }
 
-    String changePassword(int numericPasscode, int newNumericPasscode) {
-        this.numericPasscode = newNumericPasscode;
-        return "The passcode has been changed.";
-    }
 }
